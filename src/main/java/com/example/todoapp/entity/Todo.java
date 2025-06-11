@@ -10,7 +10,6 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 public class Todo {
 
     @Id
@@ -19,4 +18,8 @@ public class Todo {
 
     @Column(nullable = false)
     private String content;
+
+    public Todo(String content) {
+        this.content = content;
+    }
 }
